@@ -17,7 +17,9 @@
     "landpad": "node src/scripts/landpad.js",
     "cores": "node src/scripts/cores.js",
     "capsules": "node src/scripts/capsules.js",
-    "webcast": "node src/scripts/webcast.js"
+    "webcast": "node src/scripts/webcast.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -57,7 +59,8 @@
     "path-to-regexp": "^3.1.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
@@ -77,5 +80,6 @@
     "setupFilesAfterEnv": [
       "./test/jest.setup.js"
     ]
-  }
+  },
+  "snyk": true
 }
